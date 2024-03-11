@@ -54,12 +54,10 @@ eksctl create cluster \
 --nodes=2 \
 --nodes-min=2 \
 --nodes-max=4 \
---vpc-name=<your-vpc-name> \
 --vpc-cidr=<your-vpc-cidr> \
 --vpc-private-subnets=<comma-separated-list-of-private-subnets> \
 --vpc-public-subnets=<comma-separated-list-of-public-subnets> \
 --alb-ingress-access \
---vpc-endpoints=S3
 ```
 
 # Destroy eksCluster
