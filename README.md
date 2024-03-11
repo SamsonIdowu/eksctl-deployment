@@ -24,6 +24,7 @@ aws_secret_access_key = ****************************************
 # Usage
 Perform the following steps on your linux machine:
 
+## Option 1
 - Clone this repository to your local machine using:
 ```
 git clone https://github.com/SamsonIdowu/eksctl-deployment.git
@@ -32,6 +33,28 @@ git clone https://github.com/SamsonIdowu/eksctl-deployment.git
 - Create an eksCluster using the `eksctl create` command as shown below:
 ```
 eksctl create cluster -f ./eksctl-deployment/config.yaml
+```
+
+## Option 2
+
+- Edit the following commands and run on a linux shell:
+```
+eksctl create cluster \
+--name=test-cluster \
+--version=1.29 \
+--region=us-east-1 \
+--zones=us-east-1a,us-east-1b,us-east-1c \
+--nodegroup-name=eks-nodes \
+--node-type=t2.micro \
+--nodes=2 \
+--nodes-min=2 \
+--nodes-max=4 \
+--vpc-name=<your-vpc-name> \
+--vpc-cidr=<your-vpc-cidr> \
+--vpc-private-subnets=<comma-separated-list-of-private-subnets> \
+--vpc-public-subnets=<comma-separated-list-of-public-subnets> \
+--alb-ingress-access \
+--vpc-endpoints=S3
 ```
 
 - To remove an eksCluster, use the following command:
