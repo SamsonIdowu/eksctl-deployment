@@ -8,11 +8,6 @@ metadata:
 
 vpc:
   cidr: <your-vpc-cidr>
-  subnets:
-    private:
-      <your-vpc-private-subnets>: {}
-    public:
-      <your-vpc-public-subnets>: {}
 
 availabilityZones: ["us-east-1a", "us-east-1b", "us-east-1c"]
 
