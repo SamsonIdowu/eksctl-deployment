@@ -48,15 +48,13 @@ eksctl create cluster \
 --name=test-cluster \
 --version=1.29 \
 --region=us-east-1 \
---zones=us-east-1a,us-east-1b,us-east-1c \
+--zones=us-east-1a,us-east-1b \
 --nodegroup-name=eks-nodes \
 --node-type=t2.micro \
 --nodes=2 \
 --nodes-min=2 \
 --nodes-max=4 \
 --vpc-cidr=<your-vpc-cidr> \
---vpc-private-subnets=<comma-separated-list-of-private-subnets> \
---vpc-public-subnets=<comma-separated-list-of-public-subnets> \
 --alb-ingress-access \
 ```
 
