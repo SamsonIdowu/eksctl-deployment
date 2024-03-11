@@ -2,6 +2,7 @@
 This repo outlines a custom template that can be used to deploy the Amazon EKS service with some custom fields within a linux environment
 
 # Requirements
+
 - Make sure `eksctl` is installed on your machine:
 ```
 # Download and extract the latest release of eksctl with the following command.
@@ -21,7 +22,19 @@ aws_secret_access_key = ****************************************
 ```
 
 # Usage
+Perform the following steps on your linux machine:
+
 - Clone this repository to your local machine using:
 ```
-git clone 
+git clone https://github.com/SamsonIdowu/eksctl-deployment.git
+```
+
+- Create an eksCluster using the `eksctl create` command as shown below:
+```
+eksctl create cluster -f ./eksctl-deployment/config.yaml
+```
+
+- To remove an eksCluster, use the following command:
+```
+eksctl delete cluster -f ./eksctl-deployment/config.yaml
 ```
