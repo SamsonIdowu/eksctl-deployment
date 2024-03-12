@@ -18,6 +18,3 @@ nodeGroups:
     minSize: 2
     maxSize: 4
     privateNetworking: true
-
-addons:
-  albIngress: {}
