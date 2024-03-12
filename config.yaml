@@ -13,7 +13,7 @@ availabilityZones: ["us-east-1a", "us-east-1b", "us-east-1c"]
 
 nodeGroups:
   - name: eks-nodes
-    instanceType: t2.micro
+    instanceType: t3a.medium
     desiredCapacity: 2
     minSize: 2
     maxSize: 4
