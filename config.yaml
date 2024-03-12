@@ -21,5 +21,3 @@ nodeGroups:
 
 addons:
   albIngress: {}
-  vpcEndpoints:
-    s3: {}
