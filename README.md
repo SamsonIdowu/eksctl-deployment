@@ -61,13 +61,13 @@ eksctl create cluster \
 # Destroy eksCluster
 Perform the following steps on your linux machine:
 ## Option 1
-- To remove your eksCluster, run the following command:
+- To remove your eksCluster and all related resources, run the following command:
 ```
-eksctl delete cluster -f ./eksctl-deployment/config.yaml --all
+eksctl delete cluster -f ./eksctl-deployment/config.yaml
 ```
 
 ## Option 2
-- To remove your eksCluster, run the following command:
+- To remove your eksCluster and all related resources, run the following command:
 ```
-eksctl delete cluster --name <cluster-name> --region <region> --all
+eksctl delete cluster --name <cluster-name> --region <region>
 ```
