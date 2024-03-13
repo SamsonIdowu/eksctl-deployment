@@ -52,7 +52,7 @@ eksctl create cluster \
 --nodegroup-name=eks-nodes \
 --node-type=t2.micro \
 --nodes=2 \
---nodes-min=2 \
+--nodes-min=2   \
 --nodes-max=4 \
 --vpc-cidr=<your-vpc-cidr> \
 --alb-ingress-access \
@@ -71,3 +71,5 @@ eksctl delete cluster -f ./eksctl-deployment/config.yaml
 ```
 eksctl delete cluster --name <cluster-name> --region <region>
 ```
+
+### For more on using `eksctl`, follow this [reference](https://antonputra.com/amazon/create-eks-cluster-using-eksctl/#iam-roles-for-service-accounts)
